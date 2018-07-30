@@ -32,7 +32,10 @@
             <div class="modal-background"></div>
             <div class="modal-card">
                 <section class="modal-card-body">
-                    <form action="https://formspree.io/julian@juliangerace.com" method="post">
+                    <form netlify method="post" netlify-honeypot="bot-field" netlify>
+                        <p class="is-hidden">
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
                         <div class="field">
                             <label class="label">Name</label>
                             <div class="control">
@@ -53,15 +56,12 @@
                         </div>
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-link">Submit</button>
+                                <input type="submit" value="Submit" class="button is-link">
                             </div>
                             <div class="control">
-                                <button aria-label="close" class="button is-text">Cancel</button>
+                                <input type="reset" value="Cancel" class="button is-text">
                             </div>
                         </div>
-                        <input type="hidden" name="_subject" value="New submission for Luna Labs" />
-                        <input type="text" name="_gotcha" style="display:none" />
-                        <input type="text" name="_replyto" placeholder="julian@juliangerace.com" />
                     </form>
                 </section>
             </div>
